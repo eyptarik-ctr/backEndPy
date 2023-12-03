@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hava raporlari</title>
+</head>
+<body>
+    <h1>hello and welcome to us </h1>
+    <br>
+    <h1>this is jinja sytax</h1>
+    
+    <h1> istanbul --> {{istanbul}} </h1>
+    
+    <h1> ankara --> {{ankara}} </h1>
+    
+    <b><h1> manisa --> {{manisa}} </h1></b>
+    <br>
+    <!-- eger sozluk icersinde bir anahtarin birden fazla degeri varsa -->
+    <h1> izmir --> {{konya.3}}
+    <!-- django il ehtml de for loop kulanmak  -->
+    <ol>
+    {% for i in konya %}
+        <h1> havlar durmulari --> {{i}} </h1>
+
+    {% endfor %}
+    <ol>
+    {% if user_premium  %}
+        <h1> premium user </h1>
+        <h1>izmir  {{konya.4}} </h1>
+    {% endif %}
+    <h1><a href="{% url 'weather' %}">main page</a></h1>
+</body>
+</html>
